@@ -104,3 +104,39 @@ The easiest way to use DB schema is [Prisma](https://www.prisma.io/) that provid
 
 - Used vitest for testing
 - In order to run tests, use `npm run test`
+
+## Deploy on Vercel
+
+- Sign up with your Github account to [Vercel](https://vercel.com/new) and select the repo.
+
+- We only need to override build command to migrate our prisma schema. Change `next build` to `npx prisma generate && next build`
+
+- We may also use production intance for our Clerk app but for this example we keep in development intance.
+
+- We also enabled Safe migration for our planet scale main branch. Then Create deploy request from dev branch.
+
+- After creating main branch, we click connect, then create a password. We make sure we select connect with Prisma.
+
+- Copy `DATABASE_URL='mysql://8zecoyi9dplc4ahfmgdt:xxxxxxxxx@aws.connect.psdb.cloud/mood?sslaccept=strict'` to our Vercel Environment variable section
+
+- Also copy below environment variabes to this section;
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxx
+CLERK_SECRET_KEY=sk_test_xxx
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/journal
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/new-user
+
+OPENAI_API_KEY="sk-Xxx"
+```
+
+- Click Deploy!
+
+## Congratulations, we deploy our Mood app to Vercel!
+
+- After seeing Congratulations! we can test our app on [Mood](https://mood-inky.vercel.app/)
+
+- Also Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
