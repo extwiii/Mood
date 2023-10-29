@@ -140,3 +140,7 @@ OPENAI_API_KEY="sk-Xxx"
 - After seeing Congratulations! we can test our app on [Mood](https://mood-inky.vercel.app/)
 
 - Also Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<img width="1141" alt="Mood" src="https://github.com/extwiii/Mood/assets/2933560/2762bd51-14df-4ef0-ab57-18c3a2cb028e">
+
+
