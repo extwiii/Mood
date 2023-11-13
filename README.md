@@ -1,5 +1,7 @@
 # MOOD
 
+Demo: https://mood-inky.vercel.app/
+
 ## Fullstack AI Next.js App with Clerk / PlanetScale / Prisma / openAI
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
